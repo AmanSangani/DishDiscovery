@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { data } from '../data/data.js';
-import { motion, AnimatePresence } from 'framer-motion';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import RecipeModal from './OneRecipe.js'; // Import the RecipeModal component
+import React, { useState, useEffect } from "react";
+import { data } from "../data/data.js";
+import { motion, AnimatePresence } from "framer-motion";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import RecipeModal from "./OneRecipe.js"; // Import the RecipeModal component
 
 const Food = () => {
   const [foods, setFoods] = useState([]);
@@ -13,11 +13,14 @@ const Food = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.post('http://localhost:5000/auth/getRecipe');
+        const response = await axios.post(
+          "http://localhost:5000/auth/getRecipe"
+        );
         const recipes = response.data.recipes;
+        console.log(recipes);
         setFoods(recipes);
       } catch (error) {
-        console.error('Error fetching data', error);
+        console.error("Error fetching data", error);
       }
     }
 
@@ -27,7 +30,7 @@ const Food = () => {
   const navigate = useNavigate();
 
   const handleExploreClick = () => {
-    navigate('/Explore');
+    navigate("/Explore");
   };
 
   const handleRecipeClick = (recipe) => {

@@ -16,6 +16,7 @@ const AllRecipe = () => {
       return recipe.name.toLowerCase().includes(searchQuery.toLowerCase());
     });
     setFoods(filteredRecipes);
+    console.log(filteredRecipes);
   }, [searchQuery]);
 
   const filterType = (category) => {

@@ -19,6 +19,7 @@ const AllRecipe = () => {
         const recipes = response.data.recipes;
         setFoods(recipes);
         setFilteredFoods(recipes); // Set both the original and filtered data
+        console.log(recipes);
       } catch (error) {
         console.error('Error fetching data', error);
       }
