@@ -24,11 +24,11 @@ connectDB();
 
 const router = require('./router')
 app.use('/auth', router)
-app.get('/', (req, res) =>{
-    res.status(200).json({
-        message: 'Welcome to the'
-    })
-})
+// app.get('/', (req, res) =>{
+//     res.status(200).json({
+//         message: 'Welcome to the'
+//     })
+// })
 
 //------------Deployment-------------
 const __dirname1 = path.resolve();
