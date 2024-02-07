@@ -2,7 +2,7 @@ const express = require('express');
 const connectDB = require('./connection');
 const cors = require('cors');
 const path = require('path');
-
+const logger = require('morgan');
 
 const app = express();
 app.use(express.json());
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
   });
 
 app.use(cors());
-
+app.use(logger("dev"));
 connectDB();
 
 const router = require('./router')
