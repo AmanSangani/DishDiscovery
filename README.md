@@ -9,7 +9,6 @@ DishDiscovery is a recipe-sharing website built using the MERN stack (MongoDB, E
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
